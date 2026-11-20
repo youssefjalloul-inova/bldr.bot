@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600" role="img" aria-labelledby="t d">
+<title id="t">The only operating system the client owns</title><desc id="d">Positioning · Perceptual map</desc>
+<rect width="1000" height="600" rx="18" fill="#081638"/>
+<rect x="0.5" y="0.5" width="999" height="599" rx="18" fill="none" stroke="rgba(255,255,255,0.18)"/>
+<text x="36" y="46" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12" letter-spacing="1.9" fill="#CFF53E">POSITIONING · PERCEPTUAL MAP</text>
+<text x="36" y="80" font-family="'Inter Tight','Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="26" font-weight="800" letter-spacing="-0.6" fill="#EEF8FD">The only operating system the client owns</text>
+<rect x="500.0" y="120" width="380.0" height="200.0" fill="#CFF53E" fill-opacity="0.06"/>
+<line x1="120" x2="880" y1="320.0" y2="320.0" stroke="rgba(255,255,255,0.18)"/>
+<line x1="500.0" x2="500.0" y1="120" y2="520" stroke="rgba(255,255,255,0.18)"/>
+<rect x="120" y="120" width="760" height="400" fill="none" stroke="rgba(255,255,255,0.10)"/>
+<text x="120" y="550" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" letter-spacing="1" fill="#8FA3C4">POINT TOOL</text>
+<text x="880" y="550" text-anchor="end" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" letter-spacing="1" fill="#8FA3C4">OPERATING SYSTEM</text>
+<text x="500.0" y="550" text-anchor="middle" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="12.5" fill="#D9F1FB">How much of the work it covers</text>
+<text x="102" y="520" text-anchor="end" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" letter-spacing="1" fill="#8FA3C4">RENTED</text>
+<text x="102" y="534" text-anchor="end" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" letter-spacing="1" fill="#8FA3C4">CLOUD</text>
+<text x="102" y="128" text-anchor="end" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" letter-spacing="1" fill="#8FA3C4">OWNED,</text>
+<text x="102" y="142" text-anchor="end" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" letter-spacing="1" fill="#8FA3C4">IN-COUNTRY</text>
+<text x="864" y="148" text-anchor="end" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" letter-spacing="1.4" fill="#CFF53E">THE OPEN SPACE</text>
+<rect x="343.0" y="455.0" width="10" height="10" rx="2" fill="#8FA3C4" stroke="#081638" stroke-width="2"/>
+<text x="364.0" y="465.0" text-anchor="start" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="13.5" font-weight="400" fill="#D9F1FB">Public-cloud chatbots</text>
+<path d="M652.0 361.0L659.0 374.0L645.0 374.0Z" fill="#A9B8FF" stroke="#081638" stroke-width="2"/>
+<text x="668.0" y="373.0" text-anchor="start" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="13.5" font-weight="400" fill="#D9F1FB">Hyperscaler AI platforms</text>
+<path d="M310.0 385.0L317.0 392.0L310.0 399.0L303.0 392.0Z" fill="#F2A65A" stroke="#081638" stroke-width="2"/>
+<text x="326.0" y="397.0" text-anchor="start" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="13.5" font-weight="400" fill="#D9F1FB">Point AI tools</text>
+<circle cx="766.0" cy="176.0" r="8" fill="#CFF53E" stroke="#081638" stroke-width="2"/>
+<text x="750.0" y="181.0" text-anchor="end" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="13.5" font-weight="700" fill="#EEF8FD">BLDR OS</text>
+<text x="36" y="576" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" letter-spacing="0.6" fill="#8FA3C4">Placement is a self-assessed hypothesis, validated alongside the strategy canvas.</text>
+</svg>

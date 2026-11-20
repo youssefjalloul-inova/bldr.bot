@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BLDR | The AI operating system and factory for enterprise and government</title>
+<meta name="description" content="BLDR is the enterprise AI platform: chat, voice and custom assistants out of the box, customised with your own knowledge, plus custom agents built for your systems. All governed in one place, running where you decide.">
+<link rel="canonical" href="https://www.bldr.bot/">
+<meta name="author" content="Inova AI Solutions">
+<meta name="theme-color" content="#002A83">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BLDR by Inova AI Solutions">
+<meta property="og:title" content="BLDR: The AI operating system and factory for organisations that don't rent their intelligence">
+<meta property="og:description" content="Ready-made assistants on day one. Custom agents built for your systems. All governed in one place, running where you decide.">
+<meta property="og:url" content="https://www.bldr.bot/">
+<meta property="og:image" content="https://www.bldr.bot/assets/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600&family=Sora:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy-950:#050E26; --navy-900:#081638; --navy-700:#002A83; --navy-600:#163B96;
+  --cyan-50:#EEF8FD; --cyan-100:#D9F1FB; --cyan-400:#33C4F0; --cyan-500:#12A9E0; --cyan-700:#0670A3;
+  --lime:#CFF53E; --lime-press:#BEE52C;
+  --ink:#121A33; --ink-2:#47526B; --ink-3:#5E6880; --line:#DCE4EE; --line-2:#E8EEF5;
+  --bg:#FFFFFF; --bg-tint:#F5F9FC;
+  --r-sm:8px; --r-md:12px; --r-lg:20px;
+  --shadow:0 1px 2px rgba(8,22,56,.05),0 8px 24px rgba(8,22,56,.06);
+  --display:'Sora',system-ui,sans-serif; --body:'Plus Jakarta Sans',system-ui,sans-serif; --mono:'JetBrains Mono',ui-monospace,monospace;
+  --wrap:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;font:400 17px/1.6 var(--body);color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block;height:auto}
+a{color:var(--cyan-700)}
+h1,h2,h3{font-family:var(--display);font-weight:600;color:var(--navy-700);letter-spacing:-.02em;margin:0}
+h1{font-size:clamp(34px,4.5vw,54px);line-height:1.08}
+h2{font-size:clamp(30px,3.6vw,44px);line-height:1.12}
+h3{font-size:20px;line-height:1.3;letter-spacing:-.01em}
+p{margin:0}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font:500 13px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--cyan-700)}
+.eyebrow::before{content:"";width:22px;height:3px;border-radius:2px;background:var(--lime)}
+.lead{font-size:clamp(18px,1.6vw,20px);color:var(--ink-2);max-width:62ch}
+.sec{padding:clamp(72px,9vw,120px) 0}
+.sec-tint{background:var(--bg-tint)}
+.sec-head{max-width:760px;display:grid;gap:18px;margin-bottom:48px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--navy-700);color:#fff;padding:10px 14px;border-radius:8px;z-index:100}
+.skip:focus{left:12px}
+:focus-visible{outline:2px solid var(--cyan-500);outline-offset:2px;border-radius:4px}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;font:600 16px/1 var(--body);padding:15px 22px;border-radius:999px;text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:transform .18s ease,background-color .18s ease,border-color .18s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--lime);color:var(--navy-900)}
+.btn-primary:hover{background:var(--lime-press)}
+.btn-ghost{color:var(--navy-700);border-color:var(--line);background:#fff}
+.btn-ghost:hover{border-color:var(--cyan-500)}
+.btn svg{width:18px;height:18px}
+
+/* Header */
+.hdr{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid transparent;transition:border-color .2s ease}
+.hdr::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:3px;background:var(--lime)}
+.hdr.scrolled{border-color:var(--line-2)}
+.hdr-in{display:flex;align-items:center;gap:28px;height:72px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{height:30px;width:auto}
+.brand small{font:500 12px/1.2 var(--body);color:var(--ink-3);border-left:1px solid var(--line);padding-left:12px}
+.nav{display:flex;gap:28px;margin-left:auto}
+.nav a{font:500 15px/1 var(--body);color:var(--ink);text-decoration:none}
+.nav a:hover{color:var(--cyan-700)}
+.hdr .btn{padding:12px 18px;font-size:15px}
+.menu-btn{display:none;margin-left:auto;background:none;border:1px solid var(--line);border-radius:10px;width:44px;height:44px;cursor:pointer}
+.menu-btn span{display:block;width:18px;height:2px;background:var(--navy-700);margin:4px auto;border-radius:2px}
+@media (max-width:900px){
+  .nav,.brand small{display:none}
+  .menu-btn{display:block}
+  .hdr .btn-primary{display:none}
+  .hdr.open .nav{display:flex;position:absolute;top:72px;left:12px;right:12px;flex-direction:column;gap:0;background:#fff;border:1px solid var(--line);border-left:4px solid var(--lime);border-radius:14px;box-shadow:0 18px 40px rgba(8,22,56,.16);padding:8px}
+  .hdr.open .nav a{padding:16px 14px;border-bottom:1px solid var(--line-2)}
+  .hdr.open .nav .nav-cta{display:flex;justify-content:center;margin:10px 4px 4px;border:0;background:var(--lime);color:var(--navy-900);border-radius:999px;font-weight:600}
+}
+.nav-cta{display:none}
+
+/* Hero */
+.hero{padding:clamp(48px,7vw,96px) 0 clamp(56px,7vw,88px);background:radial-gradient(900px 480px at 85% 10%,var(--cyan-50),transparent 70%)}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.hero-copy{display:grid;gap:26px}
+.hero .lead{font-size:clamp(18px,1.7vw,21px)}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.pillars{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+.pillars li{font:500 14px/1 var(--body);color:var(--navy-700);background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 14px}
+.pillars b{font-weight:600}
+.underway{display:flex;gap:12px;align-items:flex-start;font-size:15px;color:var(--ink-2);padding-top:6px;border-top:1px solid var(--line-2)}
+.pulse{flex:none;width:10px;height:10px;border-radius:50%;background:#22B07D;margin-top:7px;box-shadow:0 0 0 0 rgba(34,176,125,.5);animation:pulse 2.4s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(34,176,125,0)}100%{box-shadow:0 0 0 0 rgba(34,176,125,0)}}
+.hero-media{position:relative;border-radius:var(--r-lg);overflow:hidden;box-shadow:0 30px 60px -20px rgba(0,42,131,.35);aspect-ratio:1376/768}
+.hero-media img{width:100%;height:100%;object-fit:cover}
+.hero-media figcaption{position:absolute;left:14px;bottom:14px;font:500 12px/1 var(--mono);color:#fff;background:rgba(5,14,38,.6);padding:8px 10px;border-radius:6px;backdrop-filter:blur(6px)}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr}}
+
+/* Systems band */
+.band{border-top:1px solid var(--line-2);border-bottom:1px solid var(--line-2);padding:26px 0;background:#fff}
+.band-in{display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+.band p{font:500 13px/1.4 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);flex:none}
+.sys{display:flex;flex-wrap:wrap;gap:8px 22px;list-style:none;margin:0;padding:0}
+.sys li{font:600 15px/1.6 var(--body);color:var(--navy-700)}
+.sys li::before{content:"";display:inline-block;width:6px;height:6px;border-radius:2px;background:var(--cyan-500);margin-right:9px;vertical-align:middle}
+
+/* Statement (the one dark band) */
+.statement{background:radial-gradient(800px 400px at 15% 0%,rgba(18,169,224,.18),transparent 70%),var(--navy-950);color:#C9D3E8;position:relative;overflow:hidden}
+.statement::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.08) 1px,transparent 1px);background-size:26px 26px;mask-image:linear-gradient(180deg,#000,transparent 85%);pointer-events:none}
+.statement .wrap{position:relative}
+.statement h2{color:#fff}
+.statement .eyebrow{color:var(--cyan-400)}
+.statement .lead{color:#B7C3DC}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:8px}
+.stat{border:1px solid rgba(255,255,255,.12);border-radius:var(--r-md);padding:26px;background:rgba(255,255,255,.03);display:grid;gap:12px;align-content:start}
+.stat strong{font:600 clamp(40px,4.4vw,54px)/1 var(--display);color:#fff;letter-spacing:-.03em}
+.stat p{color:#C9D3E8;font-size:16px}
+.src{font:400 12px/1.5 var(--mono);color:#8D9AB8;border-top:1px solid rgba(255,255,255,.1);padding-top:12px}
+.cast{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:40px}
+.cast div{border-radius:var(--r-md);padding:22px 26px;display:grid;gap:6px}
+.cast .tenant{border:1px dashed rgba(255,255,255,.22)}
+.cast .builder{background:var(--lime);color:var(--navy-900)}
+.cast span{font:500 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;opacity:.75}
+.cast q{font:600 22px/1.3 var(--display);quotes:none;color:inherit}
+.tenant q{color:#fff}
+.twist{margin-top:40px;font:600 clamp(22px,2.4vw,28px)/1.3 var(--display);color:#fff}
+.twist em{font-style:normal;color:var(--lime)}
+@media (max-width:860px){.stats,.cast{grid-template-columns:1fr}}
+
+/* Cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:28px;display:grid;gap:12px;align-content:start}
+.card .tag{font:500 12px/1 var(--mono);color:var(--cyan-700);letter-spacing:.06em;text-transform:uppercase}
+.card p{color:var(--ink-2);font-size:16px}
+@media (max-width:900px){.cards{grid-template-columns:1fr}}
+
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+@media (max-width:900px){.split{grid-template-columns:1fr;gap:36px}}
+.frame{border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)}
+
+.steps{list-style:none;margin:0;padding:0;counter-reset:s;display:grid;gap:0}
+.steps li{counter-increment:s;display:grid;grid-template-columns:44px 1fr;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
+.steps li:first-child{border-top:1px solid var(--line)}
+.steps li::before{content:counter(s,decimal-leading-zero);font:500 14px/1.9 var(--mono);color:var(--cyan-700)}
+.steps b{display:block;font:600 17px/1.4 var(--display);color:var(--navy-700);margin-bottom:2px}
+.steps span{color:var(--ink-2);font-size:16px}
+
+
+/* Three layers */
+.layers{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.layer{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:28px;display:grid;gap:12px;align-content:start;position:relative}
+.layer-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.layer-n{font:500 13px/1 var(--mono);color:var(--ink-3)}
+.ico{width:44px;height:44px;padding:10px;border-radius:12px;background:var(--cyan-50);color:var(--cyan-700)}
+.layer .tag{font:500 12px/1 var(--mono);color:var(--cyan-700);letter-spacing:.06em;text-transform:uppercase}
+.layer p{color:var(--ink-2);font-size:16px}
+.layer-hi{border-color:var(--navy-700);box-shadow:0 20px 40px -24px rgba(0,42,131,.45)}
+.layer-hi .ico{background:var(--navy-700);color:var(--lime)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:6px 0 0;padding:0}
+.chips li{font:500 13px/1 var(--body);color:var(--navy-700);background:var(--bg-tint);border:1px solid var(--line-2);border-radius:999px;padding:7px 11px}
+.base{margin-top:14px;border-radius:var(--r-lg);background:var(--navy-700);color:#D6E0F5;padding:20px 28px;display:flex;flex-wrap:wrap;gap:14px 28px;align-items:center;justify-content:space-between}
+.base b{color:#fff;font-weight:600}
+.base ul{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+.base li{font:500 13px/1 var(--mono);color:var(--navy-900);background:var(--lime);border-radius:999px;padding:8px 12px}
+.usecases{margin-top:56px;display:grid;gap:16px}
+.uc{display:flex;flex-wrap:wrap;gap:10px;list-style:none;margin:0;padding:0}
+.uc li{font:500 15px/1 var(--body);color:var(--navy-700);background:#fff;border:1px solid var(--line);border-radius:10px;padding:13px 16px}
+.usecases > p{font:600 18px/1.4 var(--display);color:var(--navy-700)}
+@media (max-width:900px){.layers{grid-template-columns:1fr}}
+
+/* Trust band */
+.badges{margin-top:56px;border-top:1px solid var(--line);padding-top:48px}
+.badges-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:12px;margin-bottom:24px}
+.badges-head p{font:400 13px/1.5 var(--mono);color:var(--ink-3);max-width:44ch}
+.badge-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;list-style:none;margin:0;padding:0}
+.badge{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:20px 16px;display:grid;justify-items:center;text-align:center;gap:10px}
+.badge svg{width:40px;height:40px;color:var(--navy-700)}
+.badge b{font:600 15px/1.25 var(--display);color:var(--navy-700)}
+.badge span{font-size:13px;color:var(--ink-3);line-height:1.35}
+@media (max-width:1000px){.badge-grid{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:560px){.badge-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* Security */
+.answer{background:#fff;border:1px solid var(--line);border-left:4px solid var(--lime);border-radius:var(--r-md);padding:26px 28px;display:grid;gap:10px;box-shadow:var(--shadow)}
+.answer p{font:600 clamp(19px,1.8vw,22px)/1.45 var(--display);color:var(--navy-700)}
+.answer small{font:400 13px/1.5 var(--mono);color:var(--ink-3)}
+.deploy{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+.deploy li{font:500 14px/1 var(--body);padding:10px 14px;border-radius:999px;background:var(--cyan-50);color:var(--navy-700);border:1px solid var(--cyan-100)}
+.controls{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;background:#fff;margin-top:48px}
+.controls div{padding:26px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:grid;gap:8px;align-content:start}
+.controls div:nth-child(3n){border-right:0}
+.controls div:nth-last-child(-n+3){border-bottom:0}
+.controls h3{font-size:17px}
+.controls p{font-size:15px;color:var(--ink-2)}
+@media (max-width:900px){.controls{grid-template-columns:1fr}.controls div{border-right:0!important;border-bottom:1px solid var(--line)!important}.controls div:last-child{border-bottom:0!important}}
+.trust{margin-top:28px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px}
+.trust ul{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+.trust li{font:500 13px/1 var(--body);color:var(--navy-700);border:1px solid var(--line);background:#fff;padding:9px 12px;border-radius:8px}
+.trust li b{font-weight:600}
+.trust p{font:400 12px/1.5 var(--mono);color:var(--ink-3)}
+
+/* Proof */
+.proof-top{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:start;margin-bottom:48px}
+.agents{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.agents li{display:flex;gap:14px;align-items:baseline;padding:14px 18px;background:#fff;border:1px solid var(--line);border-radius:10px;font-weight:500;color:var(--navy-700)}
+.agents li span{font:500 12px/1 var(--mono);color:var(--cyan-700)}
+.shots{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.shots figure{margin:0}
+.shots figcaption{font:400 12px/1.5 var(--mono);color:var(--ink-3);margin-top:10px}
+.sample{margin-top:36px;display:grid;grid-template-columns:repeat(3,1fr) 1.3fr;border:1px solid var(--line);border-radius:var(--r-md);background:#fff;overflow:hidden}
+.sample div{padding:22px 24px;border-right:1px solid var(--line)}
+.sample div:last-child{border-right:0;background:var(--bg-tint);display:flex;align-items:center}
+.sample strong{display:block;font:600 34px/1.1 var(--display);color:var(--navy-700);letter-spacing:-.02em}
+.sample span{font-size:14px;color:var(--ink-2)}
+.sample p{font:400 12px/1.6 var(--mono);color:var(--ink-3)}
+@media (max-width:900px){.proof-top,.shots{grid-template-columns:1fr}.sample{grid-template-columns:1fr 1fr}.sample div{border-bottom:1px solid var(--line)}.sample div:last-child{grid-column:1/-1}}
+
+
+/* Use cases */
+.fns{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.fn{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:22px;display:grid;gap:8px;align-content:start;border-top:3px solid var(--cyan-500)}
+.fn h3{font-size:18px}
+.fn p{font-size:15px;color:var(--ink-2)}
+.inds{margin-top:28px;color:var(--ink-2)}
+.inds b{color:var(--navy-700)}
+.wide{margin:0 0 40px;border-radius:var(--r-lg);overflow:hidden;aspect-ratio:21/8;box-shadow:var(--shadow)}
+.wide img{width:100%;height:100%;object-fit:cover}
+@media (max-width:1000px){.fns{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.fns{grid-template-columns:1fr}.wide{aspect-ratio:16/10}}
+
+/* Committee */
+.roles{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+.role{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:22px 24px;display:grid;gap:8px;align-content:start}
+.role span{font:500 12px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--cyan-700)}
+.role p{color:var(--ink);font-size:16px}
+
+/* Buy */
+.buy{display:grid;grid-template-columns:repeat(4,1fr);gap:0;list-style:none;margin:0;padding:0;counter-reset:b}
+.buy li{counter-increment:b;padding:28px 24px 0 0;border-top:2px solid var(--line);position:relative;display:grid;gap:8px;align-content:start}
+.buy li::before{content:"";position:absolute;top:-6px;left:0;width:10px;height:10px;border-radius:50%;background:var(--cyan-500);box-shadow:0 0 0 4px var(--cyan-50)}
+.buy li:last-child::before{background:var(--lime);box-shadow:0 0 0 4px #F3FBD2}
+.buy small{font:500 12px/1 var(--mono);color:var(--cyan-700)}
+.buy p{color:var(--ink-2);font-size:15px}
+@media (max-width:900px){.buy{grid-template-columns:1fr 1fr;gap:28px 0}}
+@media (max-width:560px){.buy{grid-template-columns:1fr}}
+.pack{margin-top:40px;display:flex;flex-wrap:wrap;gap:16px 24px;align-items:center;justify-content:space-between;padding:22px 26px;border-radius:var(--r-md);background:var(--cyan-50);border:1px solid var(--cyan-100)}
+.pack p{color:var(--navy-700);font-weight:500}
+
+/* FAQ */
+.faq{max-width:860px;display:grid;gap:10px}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:0 24px}
+.faq summary{cursor:pointer;list-style:none;padding:20px 0;font:600 18px/1.4 var(--display);color:var(--navy-700);display:flex;justify-content:space-between;gap:20px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font:400 24px/1 var(--body);color:var(--cyan-700);transition:transform .2s ease}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 0 22px;color:var(--ink-2);max-width:70ch}
+
+/* Book */
+.book{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.book-copy{display:grid;gap:22px;position:sticky;top:110px}
+.book-list{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.book-list li{display:flex;gap:12px;color:var(--ink-2)}
+.book-list li::before{content:"";flex:none;width:18px;height:18px;margin-top:4px;border-radius:50%;background:var(--lime) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23081638' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5 9-10'/%3E%3C/svg%3E") center/11px no-repeat}
+.cal{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow);overflow:hidden;min-height:420px;display:grid}
+.cal iframe{width:100%;height:700px;border:0}
+.cal-fallback{display:grid;place-content:center;justify-items:center;gap:16px;text-align:center;padding:48px 28px}
+.cal-fallback p{color:var(--ink-2);max-width:40ch}
+@media (max-width:900px){.book{grid-template-columns:1fr}.book-copy{position:static}}
+
+/* Footer */
+.ftr{background:var(--bg-tint);border-top:1px solid var(--line-2);padding:64px 0 32px;font-size:15px}
+.ftr-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:36px}
+.ftr-brand{display:grid;gap:14px;align-content:start}
+.ftr-brand img{height:30px;width:auto}
+.ftr-brand p{color:var(--ink-2);max-width:38ch}
+.ftr h3{font:500 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin-bottom:14px}
+.ftr ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.ftr a{color:var(--ink);text-decoration:none}
+.ftr a:hover{color:var(--cyan-700)}
+.ftr button.linkish{all:unset;cursor:pointer;color:var(--ink)}
+.ftr button.linkish:hover{color:var(--cyan-700)}
+.ftr-base{margin-top:48px;padding-top:22px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;color:var(--ink-3);font-size:14px}
+.endorse{display:flex;align-items:center;gap:10px}
+.endorse img{height:20px;width:auto}
+@media (max-width:900px){.ftr-grid{grid-template-columns:1fr 1fr}.ftr-brand{grid-column:1/-1}}
+
+/* Reveal (content is visible without JS) */
+.js .rv{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .rv{opacity:1;transform:none;transition:none}.pulse{animation:none}.btn{transition:none}}
+
+/* Cookie consent */
+.ck{position:fixed;left:16px;bottom:16px;z-index:80;max-width:380px;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 24px 60px rgba(8,22,56,.22);font-size:14px}
+.ck-in{padding:18px;display:grid;gap:10px;font-size:13px}
+.ck-h{font:600 16px/1.3 var(--display);color:var(--navy-700)}
+.ck-p,.ck-gpc{color:var(--ink-2);line-height:1.55}
+.ck-opts{display:none;gap:10px}
+.ck-open .ck-opts{display:grid}
+.ck-open .ck-cust{display:none}
+.ck:not(.ck-open) [data-ck="save"]{display:none}
+.ck-o{display:flex;gap:10px;align-items:flex-start;color:var(--ink-2);line-height:1.45}
+.ck-o b{color:var(--ink);display:block}
+.ck-o input{margin-top:4px;accent-color:var(--navy-700)}
+.ck-b{display:flex;flex-wrap:wrap;gap:8px}
+.ck-btn{font:600 14px/1 var(--body);padding:11px 14px;border-radius:999px;border:1.5px solid var(--line);background:#fff;color:var(--navy-700);cursor:pointer;flex:1 1 auto}
+.ck-btn.ck-yes{background:var(--navy-700);border-color:var(--navy-700);color:#fff}
+.ck-fab{position:fixed;left:16px;bottom:16px;z-index:70;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--navy-700);display:grid;place-items:center;cursor:pointer;box-shadow:var(--shadow)}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Organization","@id":"https://inovasolutions.ai/#org","name":"Inova AI Solutions","url":"https://inovasolutions.ai/","logo":"https://www.bldr.bot/assets/img/bldr.png","brand":{"@id":"https://www.bldr.bot/#product"},"address":[{"@type":"PostalAddress","addressLocality":"Sydney","addressCountry":"AU"},{"@type":"PostalAddress","addressLocality":"Dubai","addressCountry":"AE"}]},
+{"@type":"WebSite","@id":"https://www.bldr.bot/#site","url":"https://www.bldr.bot/","name":"BLDR","publisher":{"@id":"https://inovasolutions.ai/#org"},"inLanguage":"en"},
+{"@type":"SoftwareApplication","@id":"https://www.bldr.bot/#product","name":"BLDR","alternateName":"The AI operating system and factory","applicationCategory":"BusinessApplication","applicationSubCategory":"Sovereign AI operating system","operatingSystem":"Hosted, private cloud, on-premise, in-country","description":"BLDR is the enterprise AI platform: chat, voice and custom assistants out of the box, customised with your own knowledge, plus custom agents built and integrated into your systems. All governed in one place, hosted or in your own infrastructure.","url":"https://www.bldr.bot/","publisher":{"@id":"https://inovasolutions.ai/#org"},"featureList":["Chat, voice and custom assistants out of the box","Assistants customised with your own knowledge (RAG) and citations","Custom agents built and integrated into your systems","Model orchestration","Governed gateway for every model and tool call","Approvals and human takeover","Audit trail","Connectors to SAP Ariba, SAP ERP over RFC and on-prem ERPs over SQL","On-premise, private cloud and in-country deployment","White-label dedicated deployment","Arabic and English agents"]},
+{"@type":"FAQPage","@id":"https://www.bldr.bot/#faq","mainEntity":[
+{"@type":"Question","name":"Where do BLDR's AI models run?","acceptedAnswer":{"@type":"Answer","text":"You choose. BLDR runs as a hosted service, or on-premise, in private cloud or in-country, and every model call goes through the BLDR gateway, where your policy decides which models may see which data. Model residency is confirmed for each deployment during the security review."}},
+{"@type":"Question","name":"Does BLDR send our data to OpenAI or Anthropic?","acceptedAnswer":{"@type":"Answer","text":"Only if your policy allows it. If you approve a cloud model for a task, the call goes through the BLDR gateway: logged, filtered and approved by your rules, never by the provider's. If you don't approve one, your data stays inside your environment."}},
+{"@type":"Question","name":"Can AI agents work with SAP Ariba and SAP ERP?","acceptedAnswer":{"@type":"Answer","text":"Yes. BLDR has connectors to SAP Ariba (SLP and Sourcing), SAP ERP over RFC and on-prem ERPs over SQL. Agents read and act on your data where it already lives, so there is no rip and replace."}},
+{"@type":"Question","name":"What comes out of the box?","acceptedAnswer":{"@type":"Answer","text":"Chat, voice and custom assistants, ready to switch on. You customise each one with your own knowledge, your documents, policies and records, so it answers from what your organisation knows, with citations."}},
+{"@type":"Question","name":"Can you build a custom agent for us?","acceptedAnswer":{"@type":"Answer","text":"Yes. If the work runs through your systems, an agent for it can be built on BLDR. We design it with your team, integrate it with your systems, choose and orchestrate the models, and set the approvals and audit trail before it goes live."}},
+{"@type":"Question","name":"What is the difference between an assistant and an agent?","acceptedAnswer":{"@type":"Answer","text":"An assistant answers and helps, in chat or by voice, from your knowledge. An agent does work: it reads documents, checks records in your systems, drafts the next action and waits for a person to approve it. On BLDR both are governed, logged and reversible by a human."}},
+{"@type":"Question","name":"Which certifications does BLDR hold?","acceptedAnswer":{"@type":"Answer","text":"BLDR is built in alignment with ISO 27001, SOC 2 readiness, GDPR, Australia's Privacy Act and Saudi PDPL and NCA controls. Our certification roadmap is in the security pack, and we walk your team through the controls in place today."}},
+{"@type":"Question","name":"How long does an enterprise AI agent deployment take?","acceptedAnswer":{"@type":"Answer","text":"Our reference enterprise build across SAP Ariba, SAP ERP and an on-prem ERP took 16 weeks. Most organisations start with one back-office workflow as a proof of value, then scale from there."}},
+{"@type":"Question","name":"Can BLDR run AI agents in Arabic and English?","acceptedAnswer":{"@type":"Answer","text":"Yes. Arabic-first delivery is part of how BLDR is built, and one of the five agent patterns in our Saudi deployment turns Arabic master data into English records."}}
+]}
+]}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hdr" id="hdr">
+  <div class="wrap hdr-in">
+    <a class="brand" href="#top" aria-label="BLDR home">
+      <img src="assets/img/bldr.png" alt="BLDR" width="105" height="30">
+      <small>by Inova AI Solutions</small>
+    </a>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#platform">What BLDR is</a>
+      <a href="#security">Security</a>
+      <a href="#use-cases">Use cases</a>
+      <a href="#buy">How to start</a>
+      <a class="nav-cta" href="#book">Book a demo</a>
+    </nav>
+    <a class="btn btn-primary" href="#book">Book a demo</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- 1. Hero -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">The sovereign AI operating system</span>
+      <h1>The AI operating system and factory for organisations that don't rent their intelligence.</h1>
+      <p class="lead">Ready-made assistants on day one. Custom agents built for your systems. All governed in one place, running where you decide.</p>
+      <div class="ctas">
+        <a class="btn btn-primary" href="#book">Book a demo
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-ghost" href="#security">See where your data goes</a>
+      </div>
+      <ul class="pillars" aria-label="What BLDR stands for">
+        <li><b>Local.</b> Runs where you decide</li>
+        <li><b>Sovereign.</b> Your data, your keys</li>
+        <li><b>Governed.</b> Every action approved</li>
+        <li><b>Connected.</b> One layer, every system</li>
+      </ul>
+      <p class="underway"><span class="pulse" aria-hidden="true"></span>An enterprise deployment across SAP Ariba, SAP ERP and an on-prem ERP is underway in Saudi Arabia.</p>
+    </div>
+    <figure class="hero-media" style="margin:0">
+      <img src="assets/img/stack-riyadh.webp" alt="The BLDR stack of security and governance, memory and context, model orchestration and infrastructure, with an Arabic and English approval badge, against the Riyadh skyline" width="1376" height="768" fetchpriority="high">
+      <figcaption>Inside your walls. Inside your country.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- 2. Systems band -->
+<div class="band" aria-label="Systems BLDR connects to">
+  <div class="wrap band-in">
+    <p>Built for the systems you already run</p>
+    <ul class="sys">
+      <li>SAP Ariba</li><li>SAP ERP</li><li>Oracle</li><li>Microsoft 365</li><li>SharePoint</li><li>Salesforce</li><li>ServiceNow</li><li>Google Workspace</li><li>AWS</li><li>Azure</li><li>On-prem SQL</li><li>Your APIs</li>
+    </ul>
+  </div>
+</div>
+
+<!-- 3. The one dark band -->
+<section class="sec statement" id="why" aria-labelledby="why-h">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Who owns your AI?</span>
+      <h2 id="why-h">Your AI answers to someone else.</h2>
+      <p class="lead">A handful of AI Overlords rent intelligence to enterprises by the token, on their servers, under their terms. They can change the rent, the rules and the locks whenever they like. That isn't a supplier. That's a landlord.</p>
+    </div>
+    <div class="stats">
+      <article class="stat rv">
+        <strong>71%</strong>
+        <p>of executives say switching their primary AI vendor or model would be difficult.</p>
+        <p class="src">IBM Institute for Business Value, The Calculus of AI Sovereignty, June 2026</p>
+      </article>
+      <article class="stat rv">
+        <strong>6</strong>
+        <p>AI-related disruptions in two years on average, mostly from vendor services.</p>
+        <p class="src">IBM Institute for Business Value, June 2026</p>
+      </article>
+      <article class="stat rv">
+        <strong>79%</strong>
+        <p>of finance leaders had AI cost overruns in the last 12 months.</p>
+        <p class="src">DoiT survey by Sapio Research, February 2026</p>
+      </article>
+    </div>
+    <div class="cast rv">
+      <div class="tenant"><span>The tenant</span><q>We'll ask the vendor.</q></div>
+      <div class="builder"><span>With BLDR</span><q>We own our AI.</q></div>
+    </div>
+    <p class="twist rv">The model is a commodity. <em>Ownership is the moat.</em></p>
+  </div>
+</section>
+
+<!-- 4. What you get -->
+<section class="sec" id="platform" aria-labelledby="platform-h">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">What BLDR is</span>
+      <h2 id="platform-h">Assistants on day one. Custom agents when the work needs them.</h2>
+      <p class="lead">BLDR is one enterprise AI platform with three layers. Switch on the assistants, make them yours with your own knowledge, then build agents that do real work inside your systems.</p>
+    </div>
+    <div class="layers">
+      <article class="layer rv">
+        <div class="layer-top"><span class="layer-n">01</span>
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h11a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H9l-4 3v-3H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/><path d="M19 9v6M21 11v2"/></svg></div>
+        <span class="tag">Out of the box</span>
+        <h3>Ready-made assistants</h3>
+        <p>Chat, voice and custom assistants, ready to switch on for staff and customers. No project, no wait.</p>
+        <ul class="chips"><li>Chat</li><li>Voice</li><li>Custom</li></ul>
+      </article>
+      <article class="layer rv">
+        <div class="layer-top"><span class="layer-n">02</span>
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5.5" rx="7" ry="2.5"/><path d="M5 5.5v6c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5v-6"/><path d="M5 11.5v6c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5v-6"/></svg></div>
+        <span class="tag">Your knowledge</span>
+        <h3>Customised with your RAG</h3>
+        <p>Connect your documents, policies and data. Each assistant answers from what your organisation knows, with citations.</p>
+        <ul class="chips"><li>Documents</li><li>Policies</li><li>Records</li><li>Citations</li></ul>
+      </article>
+      <article class="layer layer-hi rv">
+        <div class="layer-top"><span class="layer-n">03</span>
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><path d="M10 6.5h4a3 3 0 0 1 3 3V14M14 17.5h-4a3 3 0 0 1-3-3V10"/></svg></div>
+        <span class="tag">Built for you</span>
+        <h3>Custom agents for your systems</h3>
+        <p>When the work needs more than answers, we build agents that act inside your systems, with model orchestration, approvals and a full audit trail.</p>
+        <ul class="chips"><li>Integration</li><li>Orchestration</li><li>Approvals</li></ul>
+      </article>
+    </div>
+    <div class="base rv" aria-label="The governed platform under every layer">
+      <p><b>One governed platform underneath.</b> Gateway, approvals, human takeover, audit trail and model routing for every assistant and agent.</p>
+      <ul><li>Hosted</li><li>Private cloud</li><li>On-premise</li><li>In-country</li></ul>
+    </div>
+
+    <div class="split" style="margin-top:72px">
+      <figure class="frame rv" style="margin:0">
+        <img src="assets/img/tablet-approval.webp" alt="A manager approves an agent action on a tablet in the BLDR console" width="1376" height="768" loading="lazy">
+      </figure>
+      <div class="rv">
+        <h3 style="margin-bottom:18px">How a custom agent goes from idea to production</h3>
+        <ol class="steps">
+          <li><div><b>Describe</b><span>Say what the work is and who signs it off.</span></div></li>
+          <li><div><b>Ground</b><span>Point the agent at your policies, documents and records, with citations.</span></div></li>
+          <li><div><b>Connect</b><span>Give it permissioned access to the systems and tools it needs.</span></div></li>
+          <li><div><b>Govern</b><span>Set the approvals, data rules and models it may use.</span></div></li>
+          <li><div><b>Deploy</b><span>Run it in your environment and watch every action in the console.</span></div></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. Security -->
+<section class="sec sec-tint" id="security" aria-labelledby="security-h">
+  <div class="wrap">
+    <div class="split">
+      <div style="display:grid;gap:22px" class="rv">
+        <span class="eyebrow">Security and trust</span>
+        <h2 id="security-h">Where your data goes.</h2>
+        <div class="answer">
+          <p>You choose where your AI runs: as a hosted service, or inside your own infrastructure. Every model call goes through the BLDR gateway: logged, filtered and approved by your policy, never by theirs.</p>
+          <small>Model residency is confirmed for each deployment in your security review.</small>
+        </div>
+        <ul class="deploy" aria-label="Deployment options">
+          <li>Hosted</li><li>Private cloud</li><li>On-premise</li><li>In-country</li><li>Dedicated and white-label</li>
+        </ul>
+      </div>
+      <figure class="frame rv" style="margin:0">
+        <img src="assets/img/server-room.webp" alt="A secured on-premise server room behind glass doors" width="1100" height="614" loading="lazy">
+      </figure>
+    </div>
+    <div class="controls rv">
+      <div><h3>Approvals before action</h3><p>An agent drafts the action. A named person approves it before anything changes.</p></div>
+      <div><h3>Human takeover</h3><p>Anyone with the right role can step in and take over a thread at any point.</p></div>
+      <div><h3>Audit trail</h3><p>Every prompt, source, tool call, approval and outcome is logged and exportable.</p></div>
+      <div><h3>Roles and tenant boundaries</h3><p>Role-based access, separate workspaces and data that never crosses a boundary.</p></div>
+      <div><h3>Policy checks first</h3><p>Data rules run before a model or tool sees anything, not after.</p></div>
+      <div><h3>Models you approve</h3><p>Route each task to an approved model by sensitivity and cost. Swap models without rebuilding agents.</p></div>
+    </div>
+    <div class="badges rv">
+      <div class="badges-head">
+        <h3>Built for governed enterprise AI</h3>
+        <p>Alignment and readiness, not certification. Our certification roadmap is in the security pack.</p>
+      </div>
+      <ul class="badge-grid" aria-label="Trust posture"><li class="badge"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M20 4l13 5v9c0 8.5-5.6 15-13 18C12.6 33 7 26.5 7 18V9z"/><path d="M14 20l4 4 8-8" stroke="#12A9E0" stroke-width="2.2" stroke-linecap="round"/></svg><b>ISO 27001</b><span>Security management alignment</span></li><li class="badge"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M20 4l13 5v9c0 8.5-5.6 15-13 18C12.6 33 7 26.5 7 18V9z"/><path d="M14 20l4 4 8-8" stroke="#12A9E0" stroke-width="2.2" stroke-linecap="round"/></svg><b>SOC 2</b><span>Ready: controls-ready posture</span></li><li class="badge"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M20 4l13 5v9c0 8.5-5.6 15-13 18C12.6 33 7 26.5 7 18V9z"/><path d="M14 20l4 4 8-8" stroke="#12A9E0" stroke-width="2.2" stroke-linecap="round"/></svg><b>GDPR</b><span>Privacy-aware workflows</span></li><li class="badge"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M20 4l13 5v9c0 8.5-5.6 15-13 18C12.6 33 7 26.5 7 18V9z"/><path d="M14 20l4 4 8-8" stroke="#12A9E0" stroke-width="2.2" stroke-linecap="round"/></svg><b>Privacy Act</b><span>Australia, privacy-aware</span></li><li class="badge"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M20 4l13 5v9c0 8.5-5.6 15-13 18C12.6 33 7 26.5 7 18V9z"/><path d="M14 20l4 4 8-8" stroke="#12A9E0" stroke-width="2.2" stroke-linecap="round"/></svg><b>PDPL and NCA</b><span>Saudi data and cyber alignment</span></li><li class="badge"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M20 4l13 5v9c0 8.5-5.6 15-13 18C12.6 33 7 26.5 7 18V9z"/><path d="M14 20l4 4 8-8" stroke="#12A9E0" stroke-width="2.2" stroke-linecap="round"/></svg><b>Sovereign-Ready</b><span>Local, controlled deployment</span></li></ul>
+    </div>
+  </div>
+</section>
+
+<!-- 6. Use cases -->
+<section class="sec" id="use-cases" aria-labelledby="uc-h">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Use cases</span>
+      <h2 id="uc-h">Assistants and agents for every team.</h2>
+      <p class="lead">If the work runs through your systems, an assistant or agent for it can be built on BLDR. Here is where teams start.</p>
+    </div>
+    <div class="fns"><article class="fn rv"><h3>Procurement</h3><p>Supplier checks, tender search, invoice matching</p></article><article class="fn rv"><h3>Sales</h3><p>Lead qualification, proposal drafts, CRM updates</p></article><article class="fn rv"><h3>Marketing</h3><p>Content review, campaign reports, on-brand drafts</p></article><article class="fn rv"><h3>HR</h3><p>Onboarding, policy answers, leave and benefits</p></article><article class="fn rv"><h3>Finance</h3><p>Invoice support, reconciliations, spend approvals</p></article><article class="fn rv"><h3>Customer service</h3><p>Chat and voice, case triage, Arabic and English</p></article><article class="fn rv"><h3>IT</h3><p>Internal support, access requests, incident summaries</p></article><article class="fn rv"><h3>Legal and compliance</h3><p>Contract review, policy checks, audit evidence</p></article></div>
+    <p class="inds rv"><b>Across industries:</b> government, financial services, healthcare, education, telecom, energy and retail.</p>
+    <p class="underway rv" style="border:0;margin-top:8px"><span class="pulse" aria-hidden="true"></span>An enterprise deployment across SAP Ariba, SAP ERP and an on-prem ERP is underway in Saudi Arabia. Results will be published with our client's approval.</p>
+    <div class="shots" style="margin-top:48px">
+      <figure class="rv">
+        <div class="frame"><img src="assets/img/bldr-approvals.webp" alt="BLDR console approvals queue: agent actions waiting for a person, each with its sources and the policy applied" width="1600" height="1000" loading="lazy"></div>
+        <figcaption>Approvals: nothing leaves without a person and a policy. Sample data.</figcaption>
+      </figure>
+      <figure class="rv">
+        <div class="frame"><img src="assets/img/bldr-threads.webp" alt="BLDR console thread: a supplier's scanned registration certificate shared in the chat, with a switch-to-human control" width="1600" height="1000" loading="lazy"></div>
+        <figcaption>Threads: documents, sources and one click to take over. Sample data.</figcaption>
+      </figure>
+    </div>
+    <div class="sample rv" aria-label="Sample console data">
+      <div><strong>99.99%</strong><span>uptime</span></div>
+      <div><strong>312</strong><span>agents</span></div>
+      <div><strong>24</strong><span>workflows a day</span></div>
+      <div><p>Sample console data: what BLDR is built to run. Not a named client's results.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. Committee -->
+<section class="sec sec-tint" id="committee" aria-labelledby="committee-h">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Who it's for</span>
+      <h2 id="committee-h">Built for the whole buying committee.</h2>
+      <p class="lead">Enterprise AI is bought by a committee. Each seat at the table gets its answer.</p>
+    </div>
+    <figure class="wide rv"><img src="assets/img/board-briefing.webp" alt="A leadership team in a boardroom reviewing an AI briefing on screen" width="1376" height="768" loading="lazy"></figure>
+    <div class="roles">
+      <article class="role rv"><span>Board and CEO</span><p>Start with one back-office workflow, priced as a deployment plus licences, measured from the first quarter. Not another pilot.</p></article>
+      <article class="role rv"><span>CFO</span><p>Licences per agent and automation, not per prompt. You know the bill before you sign.</p></article>
+      <article class="role rv"><span>CIO and architects</span><p>BLDR connects to SAP Ariba, SAP ERP and your on-prem systems. No rip and replace.</p></article>
+      <article class="role rv"><span>CISO</span><p>Give your people a governed assistant they'll actually use, and the reason to go around IT disappears.</p></article>
+      <article class="role rv"><span>Procurement and legal</span><p>Dedicated, in-country deployment, a clear rate card and an exit clause. The paperwork is already written.</p></article>
+      <article class="role rv"><span>Teams and staff</span><p>An assistant that knows your policies from day one. Agents take the repetitive steps; you approve, decide and take over whenever you want.</p></article>
+      <article class="role rv"><span>Partners</span><p>White-label BLDR, deliver it with us and keep the margin.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- 8. How to buy -->
+<section class="sec" id="buy" aria-labelledby="buy-h">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">How to start with BLDR</span>
+      <h2 id="buy-h">A clear path from first call to production.</h2>
+    </div>
+    <figure class="wide rv" style="margin-bottom:48px"><img src="assets/img/team-sydney.webp" alt="A project team discussing an AI rollout in front of a data wall" width="1376" height="768" loading="lazy"></figure>
+    <ol class="buy rv">
+      <li><small>Step 1</small><h3>Briefing</h3><p>We look at your systems, your rules and the first workflow worth automating.</p></li>
+      <li><small>Step 2</small><h3>Discovery workshop</h3><p>We map the workflow, the data and the approvals. Your security review starts here.</p></li>
+      <li><small>Step 3</small><h3>Proof of value</h3><p>Assistants on your knowledge and one agent live on your systems, measured against today.</p></li>
+      <li><small>Step 4</small><h3>Deployment</h3><p>A dedicated BLDR in your environment. Our reference enterprise build took 16 weeks.</p></li>
+    </ol>
+    <div class="pack rv">
+      <p>The procurement pack comes with it: security answers, data processing terms, rate card and partner routes.</p>
+      <a class="btn btn-ghost" href="#book">Ask for the pack</a>
+    </div>
+  </div>
+</section>
+
+<!-- 9. FAQ -->
+<section class="sec sec-tint" id="faq" aria-labelledby="faq-h">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Your questions answered</span>
+      <h2 id="faq-h">Straight answers.</h2>
+    </div>
+    <div class="faq rv">
+      <details open><summary>Where do BLDR's AI models run?</summary><p>You choose. BLDR runs as a hosted service, or on-premise, in private cloud or in-country, and every model call goes through the BLDR gateway, where your policy decides which models may see which data. Model residency is confirmed for each deployment during the security review.</p></details>
+      <details><summary>Does BLDR send our data to OpenAI or Anthropic?</summary><p>Only if your policy allows it. If you approve a cloud model for a task, the call goes through the BLDR gateway: logged, filtered and approved by your rules, never by the provider's. If you don't approve one, your data stays inside your environment.</p></details>
+      <details><summary>Can AI agents work with SAP Ariba and SAP ERP?</summary><p>Yes. BLDR has connectors to SAP Ariba (SLP and Sourcing), SAP ERP over RFC and on-prem ERPs over SQL. Agents read and act on your data where it already lives, so there is no rip and replace.</p></details>
+      <details><summary>What comes out of the box?</summary><p>Chat, voice and custom assistants, ready to switch on. You customise each one with your own knowledge, your documents, policies and records, so it answers from what your organisation knows, with citations.</p></details>
+      <details><summary>Can you build a custom agent for us?</summary><p>Yes. If the work runs through your systems, an agent for it can be built on BLDR. We design it with your team, integrate it with your systems, choose and orchestrate the models, and set the approvals and audit trail before it goes live.</p></details>
+      <details><summary>What is the difference between an assistant and an agent?</summary><p>An assistant answers and helps, in chat or by voice, from your knowledge. An agent does work: it reads documents, checks records in your systems, drafts the next action and waits for a person to approve it. On BLDR both are governed, logged and reversible by a human.</p></details>
+      <details><summary>Which certifications does BLDR hold?</summary><p>BLDR is built in alignment with ISO 27001, SOC 2 readiness, GDPR, Australia's Privacy Act and Saudi PDPL and NCA controls. Our certification roadmap is in the security pack, and we walk your team through the controls in place today.</p></details>
+      <details><summary>How long does an enterprise AI agent deployment take?</summary><p>Our reference enterprise build across SAP Ariba, SAP ERP and an on-prem ERP took 16 weeks. Most organisations start with one back-office workflow as a proof of value, then scale from there.</p></details>
+      <details><summary>Can BLDR run AI agents in Arabic and English?</summary><p>Yes. Arabic-first delivery is part of how BLDR is built, and one of the five agent patterns in our Saudi deployment turns Arabic master data into English records.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- 10. Book -->
+<section class="sec" id="book" aria-labelledby="book-h">
+  <div class="wrap book">
+    <div class="book-copy rv">
+      <span class="eyebrow">Book a demo</span>
+      <h2 id="book-h">See BLDR on your systems.</h2>
+      <p class="lead">Pick a time. We'll show you the assistants working on your knowledge, map your first custom agent and walk your team through the gateway, the approvals and the audit trail.</p>
+      <ul class="book-list">
+        <li>A BLDR specialist, not a sales script</li>
+        <li>Assistants you can switch on, agents built for your systems</li>
+        <li>Ready to buy? Ask for a proof of value. The procurement pack comes with it.</li>
+      </ul>
+    </div>
+    <div class="cal rv" id="cal" data-src="https://calendly.com/your-booking-link?hide_gdpr_banner=1&amp;background_color=ffffff&amp;text_color=121a33&amp;primary_color=002a83">
+      <div class="cal-fallback" id="calFallback">
+        <img src="assets/img/bldr-mark.png" alt="" width="56" height="45">
+        <p>The booking calendar loads here. If it doesn't, open it in a new tab.</p>
+        <a class="btn btn-primary" href="https://calendly.com/your-booking-link" target="_blank" rel="noopener">Open the booking page</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr-grid">
+      <div class="ftr-brand">
+        <img src="assets/img/bldr.png" alt="BLDR" width="105" height="30" loading="lazy">
+        <p>BLDR is the enterprise AI platform: ready-made assistants, customised with your knowledge, and custom agents built for your systems. All governed, running where you decide.</p>
+        <p style="font-weight:600;color:var(--navy-700)">Your AI. Your house. Your rules.</p>
+      </div>
+      <div>
+        <h3>BLDR</h3>
+        <ul>
+          <li><a href="#platform">Platform</a></li>
+          <li><a href="#security">Security</a></li>
+          <li><a href="#use-cases">Use cases</a></li>
+          <li><a href="#buy">How to start</a></li>
+          <li><a href="#book">Book a demo</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="https://inovasolutions.ai/about/">About Inova</a></li>
+          <li><a href="https://inovasolutions.ai/insights/">Insights and resources</a></li>
+          <li><a href="https://inovasolutions.ai/contact.html">Contact</a></li>
+          <li><a href="https://inovasolutions.ai/careers.html">Careers</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Legal and machines</h3>
+        <ul>
+          <li><a href="https://inovasolutions.ai/privacy.html">Privacy</a></li>
+          <li><a href="https://inovasolutions.ai/terms.html">Terms</a></li>
+          <li><button type="button" class="linkish" data-cookie-settings>Cookie settings</button></li>
+          <li><a href="/llms.txt">llms.txt</a> · <a href="/genome.json">genome.json</a> · <a href="/sitemap.xml">sitemap</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ftr-base">
+      <span class="endorse">© 2026 BLDR by <a href="https://inovasolutions.ai/" style="display:inline-flex"><img src="assets/img/inova.png" alt="Inova AI Solutions" width="70" height="20" loading="lazy"></a></span>
+      <span>Built in Sydney and Dubai.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var hdr=document.getElementById('hdr'),btn=document.getElementById('menuBtn');
+  function onScroll(){hdr.classList.toggle('scrolled',scrollY>8)}
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+  btn.addEventListener('click',function(){var o=hdr.classList.toggle('open');btn.setAttribute('aria-expanded',o)});
+  document.querySelectorAll('.nav a').forEach(function(a){a.addEventListener('click',function(){hdr.classList.remove('open');btn.setAttribute('aria-expanded','false')})});
+
+  // Reveal: anything already on screen shows at once, the rest fades in once.
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('in')});}
+  else{
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){var r=e.getBoundingClientRect();if(r.top<innerHeight)e.classList.add('in');else io.observe(e)});
+  }
+
+  // Calendly: load when the booking section comes near; the fallback stays if it can't load.
+  var cal=document.getElementById('cal'),done=false;
+  // Only embed on the real site; previews keep the fallback button.
+  if(!/(^|\.)bldr\.bot$|\.vercel\.app$/.test(location.hostname)) return;
+  function loadCal(){
+    if(done)return;done=true;
+    var f=document.createElement('iframe');
+    f.src=cal.getAttribute('data-src')+'&embed_domain='+encodeURIComponent(location.hostname||'bldr.bot')+'&embed_type=Inline';
+    f.title='Book a BLDR demo';f.loading='lazy';
+    f.addEventListener('load',function(){var fb=document.getElementById('calFallback');if(fb)fb.remove()});
+    cal.appendChild(f);
+  }
+  if('IntersectionObserver' in window){new IntersectionObserver(function(es,o){if(es[0].isIntersecting){loadCal();o.disconnect()}},{rootMargin:'600px'}).observe(cal)}else loadCal();
+})();
+</script>
+<script src="consent.js" defer></script>
+</body>
+</html>

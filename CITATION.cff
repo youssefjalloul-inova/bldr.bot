@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you reference this work, please cite it as below."
+title: "bldr.bot: case study and product site"
+type: software
+authors:
+  - given-names: Youssef
+    family-names: Jalloul
+    alias: YJ
+    website: "https://youssefjalloul.com"
+repository-code: "https://github.com/youssefjalloul-inova/bldr.bot"
+abstract: >-
+  BLDR OS is the AI operating system and factory for organisations that don't rent their intelligence: ready-made assistants, custom agents built into the client's systems, all governed in one place and running where the client decides. Built by Inova AI Solutions.
+keywords:
+  - enterprise AI
+  - AI operating system
+  - AI agents
+  - sovereign AI
+  - product site
+date-released: "2026-11-21"

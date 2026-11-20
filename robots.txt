@@ -1,0 +1,5 @@
+# bldr.bot: search engines and AI assistants are welcome.
+User-agent: *
+Allow: /
+
+Sitemap: https://www.bldr.bot/sitemap.xml

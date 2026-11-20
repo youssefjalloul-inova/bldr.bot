@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://www.bldr.bot/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <image:image><image:loc>https://www.bldr.bot/assets/img/stack-riyadh.webp</image:loc><image:title>The BLDR stack, inside your walls and your country</image:title></image:image>
+    <image:image><image:loc>https://www.bldr.bot/assets/img/bldr-approvals.webp</image:loc><image:title>BLDR console approvals queue (sample data)</image:title></image:image>
+    <image:image><image:loc>https://www.bldr.bot/assets/img/bldr-threads.webp</image:loc><image:title>BLDR console thread view with human takeover (sample data)</image:title></image:image>
+  </url>
+</urlset>

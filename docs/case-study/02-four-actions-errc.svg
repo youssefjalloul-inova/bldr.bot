@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 566" width="1000" height="566" role="img" aria-labelledby="t d">
+<title id="t">Eliminate, reduce, raise, create</title><desc id="d">Blue Ocean · Four Actions framework</desc>
+<rect width="1000" height="566" rx="18" fill="#081638"/>
+<rect x="0.5" y="0.5" width="999" height="565" rx="18" fill="none" stroke="rgba(255,255,255,0.18)"/>
+<text x="36" y="46" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12" letter-spacing="1.9" fill="#CFF53E">BLUE OCEAN · FOUR ACTIONS FRAMEWORK</text>
+<text x="36" y="80" font-family="'Inter Tight','Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="26" font-weight="800" letter-spacing="-0.6" fill="#EEF8FD">Eliminate, reduce, raise, create</text>
+<rect x="36" y="116" width="452" height="186" rx="14" fill="#0E2050" stroke="rgba(255,255,255,0.10)"/>
+<rect x="36" y="116" width="452" height="4" rx="2" fill="#F2A65A"/>
+<text x="60" y="156" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" letter-spacing="1.6" fill="#F2A65A">01</text>
+<text x="92" y="158" font-family="'Inter Tight','Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="21" font-weight="800" fill="#EEF8FD">Eliminate</text>
+<text x="60" y="198" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="14" fill="#F2A65A">→</text>
+<text x="82" y="198" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="14" fill="#D9F1FB">Data leaving the country</text>
+<text x="60" y="230" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="14" fill="#F2A65A">→</text>
+<text x="82" y="230" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="14" fill="#D9F1FB">A separate tool for every use case</text>
+<text x="60" y="262" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="14" fill="#F2A65A">→</text>
+<text x="82" y="262" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="14" fill="#D9F1FB">Token-metered surprise bills</text>
+<rect x="512" y="116" width="452" height="186" rx="14" fill="#0E2050" stroke="rgba(255,255,255,0.10)"/>
+<rect x="512" y="116" width="452" height="4" rx="2" fill="#33C4F0"/>
+<text x="536" y="156" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" letter-spacing="1.6" fill="#33C4F0">02</text>
+<text x="568" y="158" font-family="'Inter Tight','Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="21" font-weight="800" fill="#EEF8FD">Reduce</text>
+<text x="536" y="198" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="14" fill="#33C4F0">→</text>
+<text x="558" y="198" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="14" fill="#D9F1FB">Integration effort with SAP, Oracle and CRMs</text>
+<text x="536" y="230" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="14" fill="#33C4F0">→</text>
+<text x="558" y="230" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="14" fill="#D9F1FB">Time to the first assistant</text>
+<text x="536" y="262" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="14" fill="#33C4F0">→</text>
+<text x="558" y="262" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="14" fill="#D9F1FB">Shadow AI across teams</text>
+<rect x="36" y="322" width="452" height="186" rx="14" fill="#0E2050" stroke="rgba(255,255,255,0.10)"/>
+<rect x="36" y="322" width="452" height="4" rx="2" fill="#12A9E0"/>
+<text x="60" y="362" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" letter-spacing="1.6" fill="#12A9E0">03</text>
+<text x="92" y="364" font-family="'Inter Tight','Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="21" font-weight="800" fill="#EEF8FD">Raise</text>
+<text x="60" y="404" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="14" fill="#12A9E0">→</text>
+<text x="82" y="404" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="14" fill="#D9F1FB">Approvals and audit on every agent action</text>
+<text x="60" y="436" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="14" fill="#12A9E0">→</text>
+<text x="82" y="436" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="14" fill="#D9F1FB">Model choice and orchestration</text>
+<text x="60" y="468" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="14" fill="#12A9E0">→</text>
+<text x="82" y="468" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="14" fill="#D9F1FB">Answers grounded in the client&#x27;s own sources</text>
+<rect x="512" y="322" width="452" height="186" rx="14" fill="#0E2050" stroke="rgba(255,255,255,0.10)"/>
+<rect x="512" y="322" width="452" height="4" rx="2" fill="#CFF53E"/>
+<text x="536" y="362" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" letter-spacing="1.6" fill="#CFF53E">04</text>
+<text x="568" y="364" font-family="'Inter Tight','Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="21" font-weight="800" fill="#EEF8FD">Create</text>
+<text x="536" y="404" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="14" fill="#CFF53E">→</text>
+<text x="558" y="404" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="14" fill="#D9F1FB">One licence for AI, like an ERP</text>
+<text x="536" y="436" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="14" fill="#CFF53E">→</text>
+<text x="558" y="436" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="14" fill="#D9F1FB">In-country PaaS hosted locally</text>
+<text x="536" y="468" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="14" fill="#CFF53E">→</text>
+<text x="558" y="468" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="14" fill="#D9F1FB">Assistants and custom agents on one harness</text>
+<text x="36" y="542" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" letter-spacing="0.6" fill="#8FA3C4">Applied to the offer, not only to the website.</text>
+</svg>

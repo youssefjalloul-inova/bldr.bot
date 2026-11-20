@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-labelledby="t d">
+<title id="t">BLDR OS against the ways enterprises buy AI today</title><desc id="d">Blue Ocean · Strategy canvas</desc>
+<rect width="1000" height="560" rx="18" fill="#081638"/>
+<rect x="0.5" y="0.5" width="999" height="559" rx="18" fill="none" stroke="rgba(255,255,255,0.18)"/>
+<text x="36" y="46" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12" letter-spacing="1.9" fill="#CFF53E">BLUE OCEAN · STRATEGY CANVAS</text>
+<text x="36" y="80" font-family="'Inter Tight','Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="26" font-weight="800" letter-spacing="-0.6" fill="#EEF8FD">BLDR OS against the ways enterprises buy AI today</text>
+<line x1="96" x2="790" y1="450.0" y2="450.0" stroke="rgba(255,255,255,0.10)"/>
+<text x="80" y="454.0" text-anchor="end" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" fill="#8FA3C4">1</text>
+<line x1="96" x2="790" y1="370.0" y2="370.0" stroke="rgba(255,255,255,0.10)"/>
+<text x="80" y="374.0" text-anchor="end" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" fill="#8FA3C4">2</text>
+<line x1="96" x2="790" y1="290.0" y2="290.0" stroke="rgba(255,255,255,0.10)"/>
+<text x="80" y="294.0" text-anchor="end" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" fill="#8FA3C4">3</text>
+<line x1="96" x2="790" y1="210.0" y2="210.0" stroke="rgba(255,255,255,0.10)"/>
+<text x="80" y="214.0" text-anchor="end" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" fill="#8FA3C4">4</text>
+<line x1="96" x2="790" y1="130.0" y2="130.0" stroke="rgba(255,255,255,0.10)"/>
+<text x="80" y="134.0" text-anchor="end" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" fill="#8FA3C4">5</text>
+<text x="80" y="112" text-anchor="end" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace" font-size="10" letter-spacing="1" fill="#8FA3C4">HIGH</text>
+<text x="80" y="470" text-anchor="end" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace" font-size="10" letter-spacing="1" fill="#8FA3C4">LOW</text>
+<text x="96.0" y="480" text-anchor="middle" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="12" fill="#D9F1FB">Ready-made</text>
+<text x="96.0" y="495" text-anchor="middle" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="12" fill="#D9F1FB">assistants</text>
+<text x="182.75" y="480" text-anchor="middle" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="12" fill="#D9F1FB">Custom</text>
+<text x="182.75" y="495" text-anchor="middle" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="12" fill="#D9F1FB">agents</text>
+<text x="269.5" y="480" text-anchor="middle" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="12" fill="#D9F1FB">Runs in-country</text>
+<text x="269.5" y="495" text-anchor="middle" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="12" fill="#D9F1FB">or on-prem</text>
+<text x="356.25" y="480" text-anchor="middle" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="12" fill="#D9F1FB">Model</text>
+<text x="356.25" y="495" text-anchor="middle" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="12" fill="#D9F1FB">choice</text>
+<text x="443.0" y="480" text-anchor="middle" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="12" fill="#D9F1FB">Governance</text>
+<text x="443.0" y="495" text-anchor="middle" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="12" fill="#D9F1FB">and approvals</text>
+<text x="529.75" y="480" text-anchor="middle" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="12" fill="#D9F1FB">Connects to</text>
+<text x="529.75" y="495" text-anchor="middle" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="12" fill="#D9F1FB">ERP and CRM</text>
+<text x="616.5" y="480" text-anchor="middle" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="12" fill="#D9F1FB">Arabic and</text>
+<text x="616.5" y="495" text-anchor="middle" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="12" fill="#D9F1FB">English</text>
+<text x="703.25" y="480" text-anchor="middle" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="12" fill="#D9F1FB">Time to first</text>
+<text x="703.25" y="495" text-anchor="middle" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="12" fill="#D9F1FB">assistant</text>
+<text x="790.0" y="480" text-anchor="middle" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="12" fill="#D9F1FB">Ecosystem</text>
+<text x="790.0" y="495" text-anchor="middle" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="12" fill="#D9F1FB">scale</text>
+<polyline points="96.0,130.0 182.8,450.0 269.5,450.0 356.2,450.0 443.0,370.0 529.8,370.0 616.5,290.0 703.2,130.0 790.0,130.0" fill="none" stroke="#8FA3C4" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="4 4"/>
+<rect x="91.0" y="125.0" width="10" height="10" rx="2" fill="#8FA3C4" stroke="#081638" stroke-width="2"/>
+<rect x="177.75" y="445.0" width="10" height="10" rx="2" fill="#8FA3C4" stroke="#081638" stroke-width="2"/>
+<rect x="264.5" y="445.0" width="10" height="10" rx="2" fill="#8FA3C4" stroke="#081638" stroke-width="2"/>
+<rect x="351.25" y="445.0" width="10" height="10" rx="2" fill="#8FA3C4" stroke="#081638" stroke-width="2"/>
+<rect x="438.0" y="365.0" width="10" height="10" rx="2" fill="#8FA3C4" stroke="#081638" stroke-width="2"/>
+<rect x="524.75" y="365.0" width="10" height="10" rx="2" fill="#8FA3C4" stroke="#081638" stroke-width="2"/>
+<rect x="611.5" y="285.0" width="10" height="10" rx="2" fill="#8FA3C4" stroke="#081638" stroke-width="2"/>
+<rect x="698.25" y="125.0" width="10" height="10" rx="2" fill="#8FA3C4" stroke="#081638" stroke-width="2"/>
+<rect x="785.0" y="125.0" width="10" height="10" rx="2" fill="#8FA3C4" stroke="#081638" stroke-width="2"/>
+<polyline points="96.0,370.0 182.8,210.0 269.5,290.0 356.2,210.0 443.0,290.0 529.8,210.0 616.5,290.0 703.2,370.0 790.0,130.0" fill="none" stroke="#A9B8FF" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="2 5"/>
+<path d="M96.0 363.0L103.0 376.0L89.0 376.0Z" fill="#A9B8FF" stroke="#081638" stroke-width="2"/>
+<path d="M182.75 203.0L189.75 216.0L175.75 216.0Z" fill="#A9B8FF" stroke="#081638" stroke-width="2"/>
+<path d="M269.5 283.0L276.5 296.0L262.5 296.0Z" fill="#A9B8FF" stroke="#081638" stroke-width="2"/>
+<path d="M356.25 203.0L363.25 216.0L349.25 216.0Z" fill="#A9B8FF" stroke="#081638" stroke-width="2"/>
+<path d="M443.0 283.0L450.0 296.0L436.0 296.0Z" fill="#A9B8FF" stroke="#081638" stroke-width="2"/>
+<path d="M529.75 203.0L536.75 216.0L522.75 216.0Z" fill="#A9B8FF" stroke="#081638" stroke-width="2"/>
+<path d="M616.5 283.0L623.5 296.0L609.5 296.0Z" fill="#A9B8FF" stroke="#081638" stroke-width="2"/>
+<path d="M703.25 363.0L710.25 376.0L696.25 376.0Z" fill="#A9B8FF" stroke="#081638" stroke-width="2"/>
+<path d="M790.0 123.0L797.0 136.0L783.0 136.0Z" fill="#A9B8FF" stroke="#081638" stroke-width="2"/>
+<polyline points="96.0,210.0 182.8,370.0 269.5,450.0 356.2,370.0 443.0,370.0 529.8,290.0 616.5,370.0 703.2,210.0 790.0,290.0" fill="none" stroke="#F2A65A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="8 4"/>
+<path d="M96.0 203.0L103.0 210.0L96.0 217.0L89.0 210.0Z" fill="#F2A65A" stroke="#081638" stroke-width="2"/>
+<path d="M182.75 363.0L189.75 370.0L182.75 377.0L175.75 370.0Z" fill="#F2A65A" stroke="#081638" stroke-width="2"/>
+<path d="M269.5 443.0L276.5 450.0L269.5 457.0L262.5 450.0Z" fill="#F2A65A" stroke="#081638" stroke-width="2"/>
+<path d="M356.25 363.0L363.25 370.0L356.25 377.0L349.25 370.0Z" fill="#F2A65A" stroke="#081638" stroke-width="2"/>
+<path d="M443.0 363.0L450.0 370.0L443.0 377.0L436.0 370.0Z" fill="#F2A65A" stroke="#081638" stroke-width="2"/>
+<path d="M529.75 283.0L536.75 290.0L529.75 297.0L522.75 290.0Z" fill="#F2A65A" stroke="#081638" stroke-width="2"/>
+<path d="M616.5 363.0L623.5 370.0L616.5 377.0L609.5 370.0Z" fill="#F2A65A" stroke="#081638" stroke-width="2"/>
+<path d="M703.25 203.0L710.25 210.0L703.25 217.0L696.25 210.0Z" fill="#F2A65A" stroke="#081638" stroke-width="2"/>
+<path d="M790.0 283.0L797.0 290.0L790.0 297.0L783.0 290.0Z" fill="#F2A65A" stroke="#081638" stroke-width="2"/>
+<polyline points="96.0,130.0 182.8,130.0 269.5,130.0 356.2,130.0 443.0,130.0 529.8,130.0 616.5,130.0 703.2,210.0 790.0,370.0" fill="none" stroke="#CFF53E" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="96.0" cy="130.0" r="5.5" fill="#CFF53E" stroke="#081638" stroke-width="2"/>
+<circle cx="182.75" cy="130.0" r="5.5" fill="#CFF53E" stroke="#081638" stroke-width="2"/>
+<circle cx="269.5" cy="130.0" r="5.5" fill="#CFF53E" stroke="#081638" stroke-width="2"/>
+<circle cx="356.25" cy="130.0" r="5.5" fill="#CFF53E" stroke="#081638" stroke-width="2"/>
+<circle cx="443.0" cy="130.0" r="5.5" fill="#CFF53E" stroke="#081638" stroke-width="2"/>
+<circle cx="529.75" cy="130.0" r="5.5" fill="#CFF53E" stroke="#081638" stroke-width="2"/>
+<circle cx="616.5" cy="130.0" r="5.5" fill="#CFF53E" stroke="#081638" stroke-width="2"/>
+<circle cx="703.25" cy="210.0" r="5.5" fill="#CFF53E" stroke="#081638" stroke-width="2"/>
+<circle cx="790.0" cy="370.0" r="5.5" fill="#CFF53E" stroke="#081638" stroke-width="2"/>
+<path d="M816 123.0L823 136.0L809 136.0Z" fill="#A9B8FF" stroke="#081638" stroke-width="2"/>
+<text x="830" y="134.0" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="12.5" font-weight="400" fill="#D9F1FB">Hyperscaler AI platforms</text>
+<rect x="811" y="147.0" width="10" height="10" rx="2" fill="#8FA3C4" stroke="#081638" stroke-width="2"/>
+<text x="830" y="156.0" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="12.5" font-weight="400" fill="#D9F1FB">Public-cloud chatbots</text>
+<path d="M816 283.0L823 290.0L816 297.0L809 290.0Z" fill="#F2A65A" stroke="#081638" stroke-width="2"/>
+<text x="830" y="294.0" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="12.5" font-weight="400" fill="#D9F1FB">Point AI tools</text>
+<circle cx="816" cy="370.0" r="5.5" fill="#CFF53E" stroke="#081638" stroke-width="2"/>
+<text x="830" y="374.0" font-family="'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="12.5" font-weight="700" fill="#EEF8FD">BLDR OS</text>
+<text x="36" y="536" font-family="'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" letter-spacing="0.6" fill="#8FA3C4">Scores 1–5 are a self-assessed positioning hypothesis, to be validated with customer interviews.</text>
+</svg>

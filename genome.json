@@ -1,0 +1,234 @@
+{
+  "_about": "BLDR brand genome: the machine-readable source for how BLDR describes itself. Facts carry their source; status 'framed' means shown with a label.",
+  "version": "1.2.0",
+  "updated": "2026-11-10",
+  "changelog": [
+    {
+      "version": "1.2.0",
+      "date": "2026-11-10",
+      "change": "Category led by 'AI operating system and factory'. Use cases by function (procurement, sales, marketing, HR, finance, customer service, IT, legal) and industry. Sample uptime 99.99%. 'How to start' replaces 'How to buy'."
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-11-10",
+      "change": "Product described as three layers: assistants out of the box, customised with your knowledge, and custom agents for your systems. Procurement is one use case, not the description. Hosted option added. Trust badges shown as a full band."
+    },
+    {
+      "version": "1.0.0",
+      "date": "2026-11-10",
+      "change": "First BLDR genome, with the approved story block. Site rebuilt as an enterprise one-pager; no-code positioning retired."
+    }
+  ],
+  "brand": {
+    "name": "BLDR",
+    "tagline": "The AI operating system and factory",
+    "category": "The sovereign AI operating system",
+    "promise": "Your AI. Your house. Your rules.",
+    "endorsement": "BLDR by Inova AI Solutions",
+    "company": {
+      "name": "Inova AI Solutions",
+      "url": "https://inovasolutions.ai/",
+      "offices": [
+        "Sydney",
+        "Dubai"
+      ]
+    },
+    "url": "https://www.bldr.bot/",
+    "one_line": "BLDR is the enterprise AI platform that gives you ready-made assistants on day one and custom agents built for your systems, all governed in one place and running where you decide."
+  },
+  "positioning": "For governments and large enterprises that can't send their data to someone else's servers, BLDR is one governed platform for ready-made assistants and custom agents, built for the systems they already run and deployed where they decide.",
+  "pillars": {
+    "Local": "Runs where you decide: on-prem, private cloud or in-country.",
+    "Sovereign": "Your data, your models, your keys. No landlord.",
+    "Governed": "Every agent action approved, logged and auditable.",
+    "Connected": "One layer across SAP, local ERPs and procurement suites, not one AI per vendor."
+  },
+  "story": {
+    "hero": {
+      "name": "The Builder",
+      "is": "The organisation that owns its AI, embodied by the champion who brings AI home and gets it into production.",
+      "line": "We own our AI.",
+      "before_state": {
+        "name": "The Tenant",
+        "line": "We'll ask the vendor."
+      }
+    },
+    "villain": {
+      "name": "The Landlord",
+      "is": "The AI Overlords as one faceless figure: the small group of frontier AI companies that rent intelligence by the token, on their servers, under their terms.",
+      "line": "Please accept the updated terms.",
+      "rule": "A category, never a named company, on BLDR and Inova surfaces.",
+      "henchmen": [
+        "The Meter",
+        "The Lock",
+        "The Switch",
+        "The Blind Spot",
+        "The Leak",
+        "The Pilot Graveyard"
+      ]
+    },
+    "guide": "Inova AI Solutions",
+    "tool": "BLDR",
+    "allies": [
+      "Gatekeeper (CISO)",
+      "Treasurer (CFO)",
+      "Architect (CIO)",
+      "The Human Yes"
+    ],
+    "twist": "The model is a commodity. Ownership is the moat.",
+    "arc": [
+      "Your AI answers to someone else.",
+      "The AI Overlords rent you intelligence on their servers, under their rules.",
+      "That's why pilots stall, bills grow and data won't reach the model.",
+      "Own it instead: local, sovereign, governed, across every system you run.",
+      "BLDR is the factory that builds it."
+    ]
+  },
+  "facts": [
+    {
+      "id": "bldr.underway",
+      "claim": "An enterprise deployment across SAP Ariba, SAP ERP and an on-prem ERP is underway in Saudi Arabia",
+      "source": "Inova delivery",
+      "status": "ready"
+    },
+    {
+      "id": "bldr.agents5",
+      "claim": "Five agent patterns: document checks with OCR, Arabic-to-English master data, vendor scoring and bid-manipulation detection, tender knowledge search, invoice support",
+      "source": "BLDR feasibility study, Oct 2026",
+      "status": "ready"
+    },
+    {
+      "id": "bldr.build16",
+      "claim": "16-week enterprise build across three systems",
+      "source": "BLDR feasibility study",
+      "status": "ready"
+    },
+    {
+      "id": "bldr.connectors",
+      "claim": "Connectors to SAP Ariba (SLP and Sourcing), SAP ERP over RFC and an on-prem ERP over SQL",
+      "source": "BLDR feasibility study",
+      "status": "ready"
+    },
+    {
+      "id": "bldr.sitestats",
+      "claim": "99.99% uptime, 312 agents, 24 workflows a day",
+      "source": "BLDR console",
+      "status": "framed",
+      "label": "Sample console data"
+    },
+    {
+      "id": "bldr.certs",
+      "claim": "ISO 27001 alignment, SOC 2 Ready, GDPR privacy-aware, Privacy Act (AU), PDPL and NCA alignment, Sovereign-Ready",
+      "status": "framed",
+      "label": "Alignment and readiness, not certification"
+    },
+    {
+      "id": "res.switching",
+      "claim": "71% of executives say switching their primary AI vendor or model would be difficult",
+      "source": "IBM Institute for Business Value, The Calculus of AI Sovereignty, June 2026",
+      "status": "ready"
+    },
+    {
+      "id": "res.disruptions",
+      "claim": "An average of six AI-related disruptions in two years, mostly vendor services",
+      "source": "IBM Institute for Business Value, June 2026",
+      "status": "ready"
+    },
+    {
+      "id": "res.overruns",
+      "claim": "79% of finance leaders had AI cost overruns in the last 12 months",
+      "source": "DoiT survey by Sapio Research, Feb 2026",
+      "status": "ready"
+    }
+  ],
+  "voice": {
+    "register": "Firm, sharp, grounded. One sharp line, then the mechanism and the numbers.",
+    "rules": [
+      "We for BLDR, you for the reader",
+      "Sentence case",
+      "No emoji, no exclamation marks",
+      "Verb plus object on buttons",
+      "Every number from the facts, with its source"
+    ],
+    "banned": [
+      "no-code (as positioning)",
+      "unlock potential",
+      "revolutionary",
+      "game-changing",
+      "cutting-edge",
+      "seamless",
+      "100% secure",
+      "certified or compliant before an audit"
+    ]
+  },
+  "visual": {
+    "structure": "navy #002A83",
+    "accent": "BLDR cyan #12A9E0",
+    "signal": "lime #CFF53E, navy text only, main action and highlights",
+    "dark_moments": "One per page: the Overlords statement band",
+    "fonts": {
+      "display": "Sora",
+      "body": "Plus Jakarta Sans",
+      "mono": "JetBrains Mono",
+      "arabic": "Readex Pro"
+    }
+  },
+  "primary_action": {
+    "label": "Book a demo",
+    "url": "https://www.bldr.bot/#book"
+  },
+  "machine_files": {
+    "llms": "https://www.bldr.bot/llms.txt",
+    "sitemap": "https://www.bldr.bot/sitemap.xml",
+    "robots": "https://www.bldr.bot/robots.txt"
+  },
+  "product": {
+    "short": "BLDR comes with assistants out of the box: chat, voice and custom assistants. You make them yours by connecting your own knowledge. When the work needs more than an assistant, custom agents are built for you inside your systems, with model orchestration, approvals and a full audit trail. Everything runs on one governed platform, hosted or in your own infrastructure.",
+    "layers": [
+      {
+        "n": 1,
+        "name": "Assistants, out of the box",
+        "what": "Chat, voice and custom assistants, ready to switch on"
+      },
+      {
+        "n": 2,
+        "name": "Your knowledge",
+        "what": "Each assistant customised with the client's own RAG, answering with citations"
+      },
+      {
+        "n": 3,
+        "name": "Custom agents",
+        "what": "Built for one organisation, integrated into its systems, with model orchestration and governance"
+      }
+    ],
+    "assistant_vs_agent": "Assistants answer and help. Agents do work inside systems and wait for approval.",
+    "any_agent": "If the work runs through your systems, an agent for it can be built on BLDR.",
+    "use_cases": [
+      "Procurement",
+      "Sales",
+      "Marketing",
+      "HR",
+      "Finance",
+      "Customer service, chat and voice",
+      "IT",
+      "Legal and compliance"
+    ],
+    "deployment": [
+      "Hosted",
+      "Private cloud",
+      "On-premise",
+      "In-country",
+      "Dedicated and white-label"
+    ],
+    "systems_line": "Built for the systems you already run.",
+    "industries": [
+      "Government",
+      "Financial services",
+      "Healthcare",
+      "Education",
+      "Telecom",
+      "Energy",
+      "Retail"
+    ]
+  }
+}

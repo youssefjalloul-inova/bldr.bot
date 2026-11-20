@@ -1,0 +1,53 @@
+# BLDR
+
+> BLDR is the AI operating system and factory for enterprise and government, by Inova AI Solutions. It is the enterprise AI platform by Inova AI Solutions. It gives organisations ready-made assistants on day one and custom agents built for their systems, all governed in one place and running where they decide: hosted, in private cloud, on-premise or in-country.
+
+Promise: Your AI. Your house. Your rules.
+
+## What BLDR is: three layers
+1. Assistants, out of the box: chat, voice and custom assistants, ready to switch on for staff and customers.
+2. Your knowledge: each assistant is customised with the organisation's own RAG (documents, policies, records), answering with citations.
+3. Custom agents: agents designed and built for one organisation and integrated into its systems, with model orchestration, approvals and a full audit trail. If the work runs through the organisation's systems, an agent for it can be built on BLDR.
+
+Assistants answer and help. Agents do work inside systems and wait for a person to approve.
+
+## The governed platform under every layer
+- Gateway: every model call, tool call and data request is checked against the organisation's policy, logged and routed only to approved models.
+- Controls: approvals before action, human takeover, audit trail, role-based access and tenant boundaries, policy checks before execution, model routing by sensitivity and cost.
+- Connectors include SAP Ariba (SLP and Sourcing), SAP ERP over RFC and on-prem ERPs over SQL. Built for the systems you already run.
+- Deployment: hosted, private cloud, on-premise, in-country, dedicated and white-label.
+
+## Use cases
+Procurement, sales, marketing, HR, finance, customer service (chat and voice), IT, legal and compliance. Across government, financial services, healthcare, education, telecom, energy and retail.
+
+## Proof
+- An enterprise deployment across SAP Ariba, SAP ERP and an on-prem ERP is underway in Saudi Arabia.
+- Five agent patterns in that deployment: document checks with OCR, Arabic-to-English master data, vendor scoring and bid-manipulation detection, tender knowledge search, invoice support.
+- Reference enterprise build: 16 weeks across three systems.
+- Console figures shown on the site (99.99% uptime, 312 agents, 24 workflows a day) are sample console data, not a named client's results.
+
+## Trust posture
+- Alignment with ISO 27001, SOC 2 readiness, GDPR, Australia's Privacy Act, Saudi PDPL and NCA controls, sovereign-ready. Alignment and readiness, not certification; a certification roadmap is available in the security pack.
+
+## Answers
+- What comes out of the box? Chat, voice and custom assistants, customised with your own knowledge.
+- Can BLDR build a custom agent for us? Yes; Inova designs, integrates and governs it with your team.
+- Where do BLDR's models run? The customer chooses: hosted or in their own infrastructure. Every model call goes through the BLDR gateway, governed by the customer's policy. Model residency is confirmed per deployment.
+- Does BLDR send data to OpenAI or Anthropic? Only if the customer's policy allows it, and then through the gateway: logged, filtered and approved by the customer's rules.
+- Arabic and English: yes, Arabic-first delivery.
+
+## How to start
+Briefing, discovery workshop, proof of value on one back-office workflow, then a dedicated deployment. A procurement pack (security answers, data processing terms, rate card, partner routes) comes with it.
+
+## Links
+- [Home](https://www.bldr.bot/)
+- [Platform](https://www.bldr.bot/#platform)
+- [Security](https://www.bldr.bot/#security)
+- [Use cases](https://www.bldr.bot/#use-cases)
+- [How to start](https://www.bldr.bot/#buy)
+- [FAQ](https://www.bldr.bot/#faq)
+- [Book a demo](https://www.bldr.bot/#book)
+- [Inova AI Solutions, the company behind BLDR](https://inovasolutions.ai/)
+- [Insights and resources](https://inovasolutions.ai/insights/)
+- [Contact](https://inovasolutions.ai/contact.html)
+- [Machine-readable brand genome](https://www.bldr.bot/genome.json)
